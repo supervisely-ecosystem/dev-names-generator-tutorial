@@ -1,17 +1,18 @@
+# Development
+
 Create venv:
 ```sh
-python3 -m venv venv
+python3 -m venv .venv
 ```
 
-install requirements:
+Install requirements:
 ```sh
-. venv/bin/activate
+. .venv/bin/activate
 pip install -r requirements.txt
 deactivate
 ```
 
-how to run app from terminal:
+How to run app from terminal:
 ```sh
-. venv/bin/activate
-${PWD}/venv/bin/python ${PWD}/venv/bin/uvicorn src.main:app --host 0.0.0.0 --port 80
+${PWD}/.venv/bin/python ${PWD}/.venv/bin/uvicorn src.main:app --host 0.0.0.0 --port 8080
 ```

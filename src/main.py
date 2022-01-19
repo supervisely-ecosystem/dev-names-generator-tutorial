@@ -7,13 +7,13 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import jinja2
 
-import supervisely as sly
+# import supervisely as sly
 import names
 
 
 # log app root directory
 app_dir = str(Path(sys.argv[0]).parents[5])
-sly.logger.info(f"App root directory: {app_dir}")
+print(f"App root directory: {app_dir}")
 # sys.path.append(app_dir)
 
 
