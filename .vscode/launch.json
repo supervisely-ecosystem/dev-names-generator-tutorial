@@ -11,8 +11,8 @@
             "module": "uvicorn",
             "args": [
                 "src.main:app",
-                "--host", "127.0.0.1", 
-                "--port", "80"
+                "--host", "localhost", 
+                "--port", "8000"
             ],
             "jinja": true
         }

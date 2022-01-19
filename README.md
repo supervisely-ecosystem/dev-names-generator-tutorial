@@ -1,7 +1,6 @@
 # Development
 
-Use default host and port:
-127.0.0.1:80
+For local development/debugging use `localhost:8000`.
 
 Create venv:
 ```sh
@@ -15,7 +14,15 @@ pip install -r requirements.txt
 deactivate
 ```
 
-How to run app from terminal using venv:
+How to run app from terminal using venv on local machine during debugging:
 ```sh
-${PWD}/.venv/bin/python ${PWD}/.venv/bin/uvicorn src.main:app --host 127.0.0.1 --port 80
+${PWD}/.venv/bin/python -m ${PWD}/.venv/bin/uvicorn src.main:app --host localhost --port 8000
 ```
+
+# Deployment
+
+Agent uses application configuration from `config.json`. 
+
+`entrypoint` field - full command that agent will execute in container spawned from dockerimage defined in field `dockerimage`.
+
+`port` - deployment port (we recommend to use 8000 by default like in fastapi)
