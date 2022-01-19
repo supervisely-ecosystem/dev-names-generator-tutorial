@@ -62,7 +62,7 @@
         created() {
             console.log('First Init WS');
             this.state = this.initState;
-            this.ws = new WebSocket(`ws://${this.url.replace("http://", "").replace("https://", "").replace(/\/$/, '')}/ws`);
+            this.ws = new WebSocket(`ws${document.location.protocol === "https:" ? "s" : ""}://${this.url.replace("http://", "").replace("https://", "").replace(/\/$/, '')}/ws`);
             this.ws.onmessage = (event) => {
                 console.log('Message received from Python', event.data);
                 Object.assign(this.state, JSON.parse(event.data));
