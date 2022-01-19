@@ -7,7 +7,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/element-ui/2.15.7/index.min.js"></script>
 
 <div id="sly-app">
-    <sly-app url="0.0.0.0:8080"
+    <sly-app url="127.0.0.1:80"
              :init-state="{ name: 'max'}">
         <template v-slot="{ state, command, http }">
             <div>Hello random user: {{ state.name }}</div>
