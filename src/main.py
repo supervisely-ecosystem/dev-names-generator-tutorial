@@ -10,6 +10,9 @@ import jinja2
 # import supervisely as sly
 import names
 
+import time
+import psutil
+import threading
 
 # log app root directory
 app_dir = str(Path(sys.argv[0]).parents[5])
@@ -46,6 +49,16 @@ async def generate(request: Request):
 async def generate_ws(request: Request):
     await ws.send_json({'name': names.get_first_name()})
 
+
+
+@app.post("/stop")
+async def stop(request: Request):
+    import signal
+    print("do something here")
+    # https://github.com/tiangolo/fastapi/issues/1509
+    parent = psutil.Process(psutil.Process(os.getpid()).ppid())
+    parent.send_signal(signal.SIGINT) # KeyboardInterrupt
+    
 
 @app.websocket("/ws")
 async def init_websocket(websocket: WebSocket):
