@@ -11,5 +11,6 @@
     "port": 8000, 
     "task_location": "application_sessions",
     "icon": "https://img.icons8.com/color/100/000000/my-name-is-jeff.png",
+    "integrated_into": ["panel"],
     "icon_background": "#FFFFFF"
   }
