@@ -1,2 +1,6 @@
 .venv
 __pycache__
+venv
+supervisely
+supervisely_lib
+supervisely_debug
