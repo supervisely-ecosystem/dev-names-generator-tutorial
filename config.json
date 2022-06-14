@@ -12,5 +12,6 @@
     "task_location": "application_sessions",
     "icon": "https://img.icons8.com/color/100/000000/my-name-is-jeff.png",
     "integrated_into": ["panel"],
+    "community_agent": false,
     "icon_background": "#FFFFFF"
   }
