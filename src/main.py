@@ -4,7 +4,6 @@ import asyncio
 import time
 import json
 from dotenv import load_dotenv
-from asgiref.sync import async_to_sync
 from fastapi import FastAPI, Request, Depends
 import supervisely as sly
 import names
