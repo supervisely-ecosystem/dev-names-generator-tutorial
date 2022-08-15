@@ -20,7 +20,7 @@ load_dotenv(os.path.join(app_dir, "debug.env"))
 
 
 # init state and data (singletons)
-sly.app.LastStateJson({ "name": "abc", "counter": 0})
+sly.app.StateJson({ "name": "abc", "counter": 0})
 sly.app.DataJson({"max": 123, "counter": 0})
 
 
