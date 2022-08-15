@@ -57,7 +57,7 @@ async def generate_ws(request: Request, state: sly.app.StateJson = Depends(sly.a
 def sync_generate(request: Request, state: sly.app.StateJson = Depends(sly.app.StateJson.from_request)):
     state["name"] = names.get_first_name()
     time.sleep(50)
-    async_to_sync(state.synchronize_changes)()
+    sly.app.fastapi.run_sync(state.synchronize_changes())
 
 
 @app.post("/do-then-shutdown")
