@@ -206,6 +206,8 @@ async def do_then_shutdown(
 
 #### Count state variables
 
+<img src="">
+
 ```html
 <div style="margin-top: 10px;">
                 <div>State counter: {{state.counter}}</div>
@@ -225,6 +227,8 @@ async def count_state(
 ```
 
 #### Count data variables
+
+<img src="">
 
 ```html
 <div style="margin-top: 10px;">
